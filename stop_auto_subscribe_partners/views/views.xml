@@ -1,0 +1,20 @@
+<odoo>
+    <record id="res_config_settings_view_form_debrand" model="ir.ui.view">
+        <field name="name">Stop Auto Subscribe</field>
+        <field name="model">base.config.settings</field>
+        <field name="inherit_id" ref="base_setup.view_general_configuration"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@name='company_dependent_settings_message']" position="before">
+                <group string="Auto Emails and Auto Subscribe" name="auto_email_subscribe">
+                    <label for="id" string="Stop"/>
+                    <div name="auto_email_subscribe">
+                        <div name="app_stop_subscribe">
+                            <field name="app_stop_subscribe" class="oe_inline"/>
+                            <label for="app_stop_subscribe"/>
+                        </div>
+                    </div>
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>
